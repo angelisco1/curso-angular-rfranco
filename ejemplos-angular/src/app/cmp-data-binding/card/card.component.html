@@ -1,0 +1,6 @@
+<div [ngStyle]="{width: '300px'}">
+  <h2 [ngStyle]="{'text-align': 'center'}">{{titulo}}</h2>
+  <img [src]="imgUrl" [ngStyle]="{width: '100%'}" alt="Imagen del card">
+  <p>{{descripcion}}</p>
+  <input type="text" [value]="titulo" (input)="cambiarTitulo($event)">
+</div>
