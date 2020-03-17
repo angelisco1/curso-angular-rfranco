@@ -1,0 +1,11 @@
+<h2>Pipes</h2>
+<p>Precio: {{ precio | doble:3 | currency:'EUR' }}</p>
+<p>Precio: {{ precio | currency | doble }}</p>
+<p>{{ texto | titlecase | slice:0:11 }}</p>
+<p>Hoy: {{ hoy | date:'dd/MMMM/yyyy' }}</p>
+
+<input type="text" (change)="addMascota($event.target.value)">
+
+<ul>
+  <li *ngFor="let mascota of mascotas | filtro:'r'">{{mascota}}</li>
+</ul>

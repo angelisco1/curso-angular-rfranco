@@ -1,0 +1,51 @@
+<h2>Directivas</h2>
+
+<h3>Directivas de atributo</h3>
+
+<p [ngClass]="{textoTachado: tareaHecha, letraNaranja: true}">Un texto tachado y naranja</p>
+<button type="button" (click)="toggleTareaHecha()">Toggle tarea hecha</button>
+
+<p [ngStyle]="{color: colorTexto}">Un texto tachado y naranja</p>
+<input type="text" [(ngModel)]="colorTexto">
+
+<input *ngIf="tareaHecha" type="text" [appPowerMode]="{parpadea: true, colorFondoInicial: 'orange'}" >
+
+<hr>
+
+<h3>Directivas estructurales</h3>
+
+<h4>*ngIf</h4>
+<!-- <app-card *ngIf="tareaHecha"></app-card> -->
+<p>
+  {{tareaNombre}}
+  <span *ngIf="tareaHecha; else otroSpan">(Hecha)</span>
+
+  <ng-template #otroSpan>
+    <span>(No hecha)</span>
+  </ng-template>
+</p>
+
+<p>
+  {{tareaNombre}}
+  <span *ngIf="tareaHecha; then span1 else span2"></span>
+</p>
+<ng-template #span1>
+  <span>(Hecha)</span>
+</ng-template>
+<ng-template #span2>
+  <span>(No hecha)</span>
+</ng-template>
+
+<p>
+  {{tareaNombre}}
+  <span *ngIf="tareaHecha">(Hecha)</span>
+  <span *ngIf="!tareaHecha">(No hecha)</span>
+</p>
+
+<h4>ngSwitch</h4>
+
+<div [ngSwitch]="colorTexto">
+  <p *ngSwitchCase="'black'">El color es negro</p>
+  <p *ngSwitchCase="'white'">El color es blanco</p>
+  <p *ngSwitchDefault>No es ni negro ni blanco</p>
+</div>

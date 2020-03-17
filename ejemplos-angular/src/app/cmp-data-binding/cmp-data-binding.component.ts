@@ -16,13 +16,27 @@ export class CmpDataBindingComponent implements OnInit {
 
   }
 
-  cambiarNombrePeter() {
+  reproducir(video) {
+    // console.dir(video)
+    video.play()
+  }
+
+  pausar(video) {
+    video.pause()
+  }
+
+  mostrarValor(valor: string): void {
+    console.log('Valor', valor);
+  }
+
+  cambiarNombrePeter(): void {
     this.nombre = 'Peter';
   }
 
-  cambiarNombre(event) {
+  cambiarNombre(nuevoNombre: string): void {
     // console.log(event.target);
-    this.nombre = typeof(event) === 'string' ? event : event.target.value;
+    // this.nombre = typeof(event) === 'string' ? event : event.target.value;
+    this.nombre = nuevoNombre;
   }
 
 }

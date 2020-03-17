@@ -9,15 +9,29 @@
 
 <input type="text" placeholder="Escribe tu nombre">
 <input type="text" [placeholder]="nombre">
+<hr>
 
 <h3>Event Binding</h3>
 <button type="button" (click)="cambiarNombrePeter()">Cambia el nombre a Peter</button>
-<input type="text" (input)="cambiarNombre($event)" [value]="nombre"  pattern="^A.*">
+<input type="text" (input)="cambiarNombre($event.target.value)" [value]="nombre"  pattern="^A.*">
+<hr>
 
 <h3>Two-Way Data Binding</h3>
 <input type="text" [(ngModel)]="nombre">
+<hr>
 
 <h3>Comunicar componentes</h3>
+<app-card [titulo]="nombre" (nombreChanged)="cambiarNombre($event)"></app-card>
 <app-card></app-card>
 <app-card titulo="Angular"></app-card>
-<app-card [titulo]="nombre" (nombreChanged)="cambiarNombre($event)"></app-card>
+<hr>
+
+<h3>Referencias</h3>
+<input type="text" id="input1" #miInput>
+<button type="button" (click)="mostrarValor(miInput.value)">Muestra el valor</button>
+
+<video #video1 style="width: 200px">
+  <source src="/assets/video1.mp4" />
+</video>
+<button type="button" (click)="reproducir(video1)">Play</button>
+<button type="button" (click)="pausar(video1)">Pause</button>
