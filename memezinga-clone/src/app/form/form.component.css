@@ -1,0 +1,7 @@
+input {
+  height: 25px;
+  font-size: 20px;
+  border: 1px solid darkgray;
+  display: block;
+  margin: 15px 0;
+}

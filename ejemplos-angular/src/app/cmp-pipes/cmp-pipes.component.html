@@ -9,3 +9,27 @@
 <ul>
   <li *ngFor="let mascota of mascotas | filtro:'r'">{{mascota}}</li>
 </ul>
+
+<h2>Pipes currency con Locale</h2>
+<p>Precio: {{ precioConSimbolo0 | currency }}</p>
+
+<h2>Pipes currency desde el componente</h2>
+<p>Precio: {{ precioConSimbolo1 }}</p>
+<p>Precio: {{ precioConSimbolo2 }}</p>
+<p>Precio: {{ precioConSimbolo3 }}</p>
+<p>Precio: {{ precioConSimbolo4 }}</p>
+<p>Precio: {{ precioConSimbolo5 }}</p>
+<p>Precio: {{ precioConSimbolo6 }}</p>
+<hr>
+
+<h2>Pipes date con Locale</h2>
+<p>Date: {{ date0 | date }}</p>
+
+<h2>Pipes date desde el componente</h2>
+<p>Date: {{ date1 }}</p>
+<p>Date: {{ date2 }}</p>
+<p>Date: {{ date3 }}</p>
+<p>Date: {{ date4 }}</p>
+<p>Date: {{ date5 }}</p>
+<p>Date: {{ date6 }}</p>
+<p>Date: {{ date7 }}</p>

@@ -1,0 +1,10 @@
+<h2>Mis memes creados</h2>
+<div class="main-container">
+  <div *ngFor="let meme of memes">
+    <app-meme [meme]="meme"></app-meme>
+    <div class="btn-group">
+      <button type="button" class="btn delete" (click)="eliminar(meme.id)">Eliminar</button>
+      <button type="button" class="btn edit" (click)="editar(meme.id)">Editar</button>
+    </div>
+  </div>
+</div>

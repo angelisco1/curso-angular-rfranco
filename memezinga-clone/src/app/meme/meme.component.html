@@ -1,0 +1,5 @@
+<div class="meme-container">
+  <p class="texto-meme" id="texto-meme-top" [ngStyle]="{color: meme.color}">{{meme.textoArriba | uppercase}}</p>
+  <img [src]="meme.imgUrl" alt="Un meme">
+  <p class="texto-meme" id="texto-meme-bottom" [ngStyle]="{color: meme.color}">{{meme.textoAbajo | uppercase}}</p>
+</div>

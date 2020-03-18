@@ -1,0 +1,25 @@
+<h2>Formulario normal (plantilla)</h2>
+<form (ngSubmit)="guardar(miForm)" #miForm="ngForm">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [ngModel]="datosForm.nombre" required minlength="5" #inputNombre="ngModel">
+    <!-- <button type="button" (click)="mostrar(inputNombre)">Mostrar input</button> -->
+    <span *ngIf="inputNombre.invalid && inputNombre.dirty">{{inputNombre.errors | json}}</span>
+    <!--
+    <ng-template [ngIf]="true">
+      <p>Hay algún error</p>
+    </ng-template>
+    -->
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [ngModel]="datosForm.email" #inputEmail="ngModel" required>
+    <span *ngIf="inputEmail.invalid && inputEmail.dirty">{{inputEmail.errors | json}}</span>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [ngModel]="datosForm.password" #inputPass="ngModel" required>
+    <span *ngIf="inputPass.invalid && inputPass.dirty">{{inputPass.errors | json}}</span>
+  </div>
+  <button type="submit" [disabled]="miForm.invalid">Guardar</button>
+</form>

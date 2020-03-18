@@ -1,0 +1,18 @@
+.meme-container {
+  margin: 0px;
+}
+
+.texto-meme {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-size: 35px;
+}
+
+#texto-meme-top {
+  top: 45px;
+}
+
+#texto-meme-bottom {
+  bottom: 45px;
+}

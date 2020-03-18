@@ -1,0 +1,42 @@
+h2 {
+  text-align: center;
+}
+
+div.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button.btn {
+  height: 30px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+div.btn-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+button.delete {
+  background-color: red;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: white;
+  color: red;
+}
+
+button.edit {
+  background-color: yellowgreen;
+}
+
+button.edit:hover {
+  background-color: black;
+  color: yellowgreen;
+}
