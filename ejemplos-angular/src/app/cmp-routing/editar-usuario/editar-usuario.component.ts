@@ -21,7 +21,10 @@ export class EditarUsuarioComponent implements OnInit, ComponentCanDeactivate {
   }
 
   guardar() {
+    prompt('Quieres guardar los datos?')
+    // Aqui hariamos la peticion POST
     this.datosGuardados = !this.datosGuardados;
+    // this.router.navigate(['/'])
     console.log('Datos guardados?: ' + this.datosGuardados);
   }
 

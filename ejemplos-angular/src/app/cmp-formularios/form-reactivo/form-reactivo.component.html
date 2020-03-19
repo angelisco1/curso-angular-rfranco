@@ -38,7 +38,7 @@
   <div formArrayName="skills">
     <!-- <mi-input type="text" *ngFor="let skill of miFormulario.controls.skills.controls; let pos = index" [formControlName]="pos" [val]="miFormulario.controls.skills.controls[pos]"></mi-input> -->
 
-    <input type="text" *ngFor="let skill of miFormulario.controls.skills.controls; let pos = index" [formControlName]="pos">
+    <input type="text" *ngFor="let skill of miFormulario.controls.skills; let pos = index" [formControlName]="pos">
     <button type="button" (click)="addSkill()">Add skill</button>
   </div>
 

@@ -2,8 +2,8 @@
 <ul>
   <li *ngFor="let usuario of usuarios">
     Usuario {{usuario.id}}
-    <a [routerLink]="['/usuarios', usuario.id, 'informacion']">Información</a>
-    <a [routerLink]="['/usuarios', usuario.id, 'editar']">Editar usuario</a>
+    <a [routerLink]="[usuario.id, 'informacion']">Información</a>
+    <a [routerLink]="[usuario.id, 'editar']">Editar usuario</a>
   </li>
 </ul>
 <hr>

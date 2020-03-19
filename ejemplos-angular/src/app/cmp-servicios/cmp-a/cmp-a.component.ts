@@ -18,7 +18,7 @@ export class CmpAComponent implements OnInit {
   }
 
   addDato() {
-    this.datosService.insertDato('Dato 2');
+    this.datosService.insertDato('3');
   }
 
 }

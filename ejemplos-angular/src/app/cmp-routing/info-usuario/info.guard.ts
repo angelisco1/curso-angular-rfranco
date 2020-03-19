@@ -9,6 +9,7 @@ export class InfoGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    // Comprobar si tenemos el token
     return confirm('Estas logueado y tienes permiso para ver la información??');
   }
 }

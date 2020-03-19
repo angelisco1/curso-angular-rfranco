@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-componente.component';
@@ -29,6 +30,7 @@ import { UsuarioComponent } from './cmp-routing/usuario/usuario.component';
 import { InfoUsuarioComponent } from './cmp-routing/info-usuario/info-usuario.component';
 import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usuario.component';
 import { ErrorComponent } from './cmp-routing/error.component';
+import { CmpInternacionalizacionComponent } from './cmp-internacionalizacion/cmp-internacionalizacion.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { ErrorComponent } from './cmp-routing/error.component';
     UsuarioComponent,
     InfoUsuarioComponent,
     EditarUsuarioComponent,
-    ErrorComponent
+    ErrorComponent,
+    CmpInternacionalizacionComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,9 @@ import { ErrorComponent } from './cmp-routing/error.component';
     HttpClientModule,
     Routing
   ],
-  providers: [],
+  providers: [
+    CurrencyPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

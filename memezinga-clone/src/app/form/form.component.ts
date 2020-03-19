@@ -18,6 +18,7 @@ export class FormComponent implements OnInit, OnDestroy {
   ngOnInit() { }
 
   cambiarMeme(event): void {
+    // this.meme.textoArriba = event.target.value
     this.meme[event.target.name] = event.target.value;
   }
 

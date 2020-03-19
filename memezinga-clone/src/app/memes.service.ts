@@ -21,6 +21,7 @@ export class MemesService {
           const arrMemes = [];
           for (let id in memes) {
             let datos = memes[id];
+            // currencyPipe.transform(producto.precio, 'EUR')
             const meme = new Meme(datos.textoArriba, datos.textoAbajo, datos.color, datos.imgUrl, id);
             arrMemes.push(meme);
           }
@@ -38,9 +39,9 @@ export class MemesService {
 
   addMeme(meme: Meme): Observable<any> {
     delete meme.id;
-    const nuevoMeme = Object.assign({}, meme);
+    // const nuevoMeme = Object.assign({}, meme);
     // this.listaMemes.push(nuevoMeme);
-    return this.http.post(`${this.URL}.json`, nuevoMeme);
+    return this.http.post(`${this.URL}.json`, meme);
   }
 
   updateMeme(meme: Meme): Observable<any> {

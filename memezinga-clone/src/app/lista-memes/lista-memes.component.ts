@@ -23,15 +23,16 @@ export class ListaMemesComponent implements OnInit, OnDestroy {
   }
 
   getDatos() {
-    const subs = this.memesService.getMemes().subscribe(memes => this.memes = memes);
+    const subs: Subscription = this.memesService.getMemes().subscribe(memes => this.memes = memes);
     this.subscriptions.push(subs);
   }
 
   eliminar(id: string) {
-    const subs = this.memesService.deleteMeme(id).subscribe(() => {
-      // this.router.navigate(['/memes'])
-      this.getDatos();
-    });
+    const subs = this.memesService.deleteMeme(id)
+      .subscribe(() => {
+        // this.router.navigate(['/memes'])
+        this.getDatos();
+      });
     this.subscriptions.push(subs);
   }
 

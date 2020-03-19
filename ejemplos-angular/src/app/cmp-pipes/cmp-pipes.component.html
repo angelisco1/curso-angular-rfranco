@@ -11,7 +11,7 @@
 </ul>
 
 <h2>Pipes currency con Locale</h2>
-<p>Precio: {{ precioConSimbolo0 | currency }}</p>
+<p>Precio: {{ precioConSimbolo0 | currency:'EUR' }}</p>
 
 <h2>Pipes currency desde el componente</h2>
 <p>Precio: {{ precioConSimbolo1 }}</p>
@@ -23,7 +23,7 @@
 <hr>
 
 <h2>Pipes date con Locale</h2>
-<p>Date: {{ date0 | date }}</p>
+<p>Date: {{ date0 | date: 'dd MMMM yyyy' }}</p>
 
 <h2>Pipes date desde el componente</h2>
 <p>Date: {{ date1 }}</p>

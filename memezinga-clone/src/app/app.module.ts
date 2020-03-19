@@ -28,7 +28,8 @@ import { TokenInterceptor } from './token.interceptor';
     HttpClientModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
+    // {provide: HTTP_INTERCEPTORS, useClass: AñadeCabecerasInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })
